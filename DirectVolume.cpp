@@ -237,7 +237,7 @@ void DirectVolume::handleDiskChanged(const char *devpath, NetlinkEvent *evt) {
         mDiskNumParts = atoi(tmp);
     } else {
         SLOGW("Kernel block uevent missing 'NPARTS'");
-        mDiskNumParts = 1;
+        mDiskNumParts = 0;
     }
 
     int partmask = 0;
